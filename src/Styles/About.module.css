@@ -1,0 +1,42 @@
+.sectionHeading {
+  font-size: clamp(2rem, 10vw, 8rem);
+  font-size: 40px;
+  color: #4dbdfa;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  letter-spacing: 0.2rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10rem;
+  z-index: 5;
+}
+.sectionHeading::before {
+  content: attr(data-outline);
+  
+  position: absolute;
+  left: 0%;
+  font-size: 50px;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 800;
+  color: #4dbdfa;
+
+  opacity: 20%;
+  -webkit-text-stroke: 1.5px #e8e6ee2f;
+  z-index: 2;
+}
+
+.table td:nth-child(even){
+  color:#999999 ;
+}
+.table {
+  /* border: 1px solid rgb(243, 235, 235); */
+  height: 260px;
+  /* width: 100%; */
+}
+.table td{
+  font-size: 17px;
+}
