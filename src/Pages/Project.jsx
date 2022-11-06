@@ -27,19 +27,17 @@ export const Project = () => {
               </div>
               <div className={styles.right}>
                 <h2 className={styles.projectTitle}>Myntra Clone</h2>
-                <h3 className={styles.projectSubTitle}>
-                  Clone of Ecommerce Website
-                </h3>
+                
                 <p className={styles.projectDesc}>
-                  I made this web application with my team members. This application
-                  is the clone of Ecommerce Website Myntra.
-                  <ul>
+                  Build this E-commerce web application with my team members in 7 days.
                     <h3>Features</h3>
+                  <ul style={{marginLeft:"30px"}}>
                     <li>Login</li>
                     <li>Signup</li>
                     <li>Add a item to Cart</li>
                     <li>Purchase an item</li>
                   </ul>
+                  <h2>Tech Stack: HTML | CSS | Javascript | Local Storage</h2>
                 </p>
                 <div className={styles.buttons}>
                   <a href="https://github.com/shivraj32644/MyntraClone" target='_blank' className={styles.primaryBtn}>
@@ -63,21 +61,19 @@ export const Project = () => {
               </div>
               <div className={styles.right}>
                 <h2 className={styles.projectTitle}>HappyFox Clone</h2>
-                <h3 className={styles.projectSubTitle}>
-                HappyFox is a SaaS support platform. 
-                </h3>
+                
                 <p className={styles.projectDesc}>
-                I made this web application with my team members. This application
-                  is the clone of HappyFox which is a software-as-a-service (SaaS)
+                Build clone of HappyFox.com with my team members in 5 Days. HappyFox is a (SaaS)
                   support platform. That offer an enterprise-grade help desk
                   ticketing system and an intuitively designed live chat software.
-                  <ul>
-                    <h3>Features</h3>
+                    <h2>Features</h2>
+                  <ul style={{marginLeft:"30px"}}>
                     <li>Login</li>
                     <li>Signup</li>
                     <li>Admin Panel</li>
                     <li>Create Tickets</li>
                   </ul>
+                  <h2>Tech Stack: HTML | CSS | Javascript | JSON-Server | API </h2>
                 </p>
                 <div className={styles.buttons}>
                   <a href="https://github.com/Vinay-Khairnar/HappyFox-Clone" target='_blank' className={styles.primaryBtn}>

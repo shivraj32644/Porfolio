@@ -38,6 +38,7 @@ export const Intro = () => {
         spacing={5}
         borderRadius={"8px"}
         color="#fff"
+        
         // display={'flex'}
         // flexWrap={'wrap'}
       >
@@ -149,19 +150,19 @@ export const Intro = () => {
 
 
         <Box w={"40%"}>
-          {/* <Image
+          <Image
             src={
               "https://i.pinimg.com/originals/bb/37/5c/bb375cdd655184ca2715ac5059e73651.gif"
             }
             alt="img2"
-          /> */}
-                <Image
+          />
+                {/* <Image
                   borderRadius={'30px'}
             src={
               "https://i.pinimg.com/originals/18/a4/94/18a4949fc9c8067172d3b96e302e7097.gif"
             }
             alt="img2"
-          />
+          /> */}
         </Box>
       </>
         )}

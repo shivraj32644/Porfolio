@@ -7,7 +7,7 @@ export const RefContextProvider = ({children}) => {
   const aboutRef = useRef(null);
   const introRef = useRef(null);
   const projectRef = useRef(null);
-  const resumeRef = useRef(null);
+  const githubRef = useRef(null);
   const skillRef = useRef(null);
   const contactRef = useRef(null);
 
@@ -16,7 +16,7 @@ export const RefContextProvider = ({children}) => {
     aboutRef,
     introRef,
     projectRef,
-    resumeRef,
+    githubRef,
     skillRef,
     contactRef
   }

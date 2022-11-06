@@ -34,7 +34,7 @@ export const About = () => {
     lg: false,
   });
   return (
-    <Box ref={aboutRef} mt={'90px'} pb={'80px'}>
+    <Box ref={aboutRef} mt={'90px'} pt='90px' pb={'90px'}>
       <h2 ref={aboutRef} className={styles.sectionHeading} data-outline="About">
         About me
       </h2>
@@ -46,6 +46,7 @@ export const About = () => {
       >
         {varient ? (
           <>
+            
             <Box color={"white"} w={"664px"}>
               <p style={{ color: "#999999", width: "80%", marginLeft: "15px" }}>
                 A small river named Duden flows by their place and supplies it
@@ -158,7 +159,7 @@ export const About = () => {
                   </Table>
                 </TableContainer>
               </ScaleFade>
-              <Button mt={"120px"} ml="15px" bg="#4dbdfa" color={"black"}>
+              <Button mt={"50px"} ml="15px" bg="#4dbdfa" color={"black"}>
                 Download Resume
               </Button>
             </Box>

@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "../Components/Navbar";
 import { Skills } from "./Skills";
 import { Project } from "./Project";
-import { Resume } from "./Resume";
+import { Resume } from "./Github";
 import { About } from "./About";
 import { Intro } from "./Intro";
 import { useContext } from "react";

@@ -16,7 +16,7 @@ import { useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RefContext } from "../Context/RefContext";
 export const Navbar = () => {
-  const {aboutRef,introRef,projectRef,resumeRef,skillRef,contactRef} = useContext(RefContext)
+  const {aboutRef,introRef,projectRef,githubRef,skillRef,contactRef} = useContext(RefContext)
  
 
 
@@ -33,7 +33,7 @@ export const Navbar = () => {
   const about = useRef(null);
   const skill = useRef(null);
   const project = useRef(null);
-  const resume = useRef(null);
+  const github = useRef(null);
   const contect = useRef(null);
   // // const [isModalOpen, setIsModalOpen] = React.useState(false)
   useOutsideClick({
@@ -53,8 +53,8 @@ export const Navbar = () => {
     handler: () => (project.current.style.borderBottom = "none"),
   });
   useOutsideClick({
-    ref: resume,
-    handler: () => (resume.current.style.borderBottom = "none"),
+    ref: github,
+    handler: () => (github.current.style.borderBottom = "none"),
   });
   useOutsideClick({
     ref: contect,
@@ -81,8 +81,8 @@ export const Navbar = () => {
     projectRef.current.scrollIntoView()   
   };
   const handleRef5 = (e) => {
-    resume.current.style.borderBottom = "3px solid #4dbdfa";
-     resumeRef.current.scrollIntoView()   
+    github.current.style.borderBottom = "3px solid #4dbdfa";
+     githubRef.current.scrollIntoView()   
   };
   const handleRef6 = (e) => {
     contect.current.style.borderBottom = "3px solid #4dbdfa";
@@ -173,8 +173,8 @@ export const Navbar = () => {
               <Box onClick={handleRef4} ref={project}>
                 PROJECTS
               </Box>
-              <Box onClick={handleRef5} ref={resume}>
-                RESUME
+              <Box onClick={handleRef5} ref={github}>
+                GITHUB
               </Box>
               <Box onClick={handleRef6} ref={contect}>
                 CONTACT
