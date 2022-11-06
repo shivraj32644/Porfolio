@@ -17,10 +17,10 @@ import { About } from "./About";
 import { Intro } from "./Intro";
 import { useContext } from "react";
 import { RefContext } from "../Context/RefContext";
+import { Contact } from "./Contact";
 
 export const Home = () => {
-  const allref = useContext(RefContext)
-  console.log(allref)
+  
   return (
     <Container bg={"#000"}  maxW={'86%'}>
       <Navbar />
@@ -29,6 +29,7 @@ export const Home = () => {
       <Skills />
       <Project />
       <Resume />
+      <Contact/>
     </Container>
   );
 };

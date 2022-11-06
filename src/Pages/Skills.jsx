@@ -1,134 +1,90 @@
-import { Box, Image } from "@chakra-ui/react";
+
 import React, { useState } from "react";
-import { Navbar } from "../Components/Navbar";
-import { ImHtmlFive2 } from "react-icons/im";
 import styles from "../Styles/Skills.module.css";
-import { DiCss3 } from "react-icons/di";
-import { SiJavascript } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { DiMongodb } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
-import { SkillSlider } from "../Components/SkillSlider";
 import { useContext } from "react";
 import { RefContext } from "../Context/RefContext";
 export const Skills = () => {
   const { skillRef } = useContext(RefContext);
- 
+
   return (
     <div ref={skillRef} id={styles.mainBox}>
-       <h2 className={'sectionHeading'} data-outline="Skills">
-            Skills
-          </h2>
-      <div className={styles.container}  >
-        <div className={styles.servicebox} >
-        <div className={styles.icon} style={{backgroundColor:"#4eb7ff"}} >
-            < ImHtmlFive2 className={styles.ionicon} />
-            
-        </div>
-        <div className={styles.content}>
-        <h2>HTML</h2>
-          {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-            accusamus possimus doloribus quaerat nulla nemo. Repudiandae animi,
-            sapiente dolores non debitis
-          </p> */}
-            {/* <SkillSlider val={90} /> */}
-        </div>
-        </div>
-
-
-        <div className={styles.servicebox}>
-        <div className={styles.icon} style={{backgroundColor:"#fd6494"}}>
-           < DiCss3 className={styles.ionicon}/>
-        </div>
-        <div className={styles.content}>
-          <h2>CSS</h2>
-          {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-            accusamus possimus doloribus quaerat nulla nemo. Repudiandae animi,
-            sapiente dolores non debitis
-          </p> */}
-        </div>
-        </div>
-
-
-        <div className={styles.servicebox}>
-        <div className={styles.icon} style={{backgroundColor:"#43f390"}}>
-           < SiJavascript className={styles.ionicon}/>
-        </div>
-        <div className={styles.content}>
-          <h2>Javascript</h2>
-          {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-            accusamus possimus doloribus quaerat nulla nemo. Repudiandae animi,
-            sapiente dolores non debitis
-          </p> */}
-        </div>
-        </div>
-
-
-        <div className={styles.servicebox}>
-        <div className={styles.icon} style={{backgroundColor:"#ffb508"}}>
-           < FaReact className={styles.ionicon}/>
-        </div>
-        <div className={styles.content}>
-          <h2>React</h2>
-          {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-            accusamus possimus doloribus quaerat nulla nemo. Repudiandae animi,
-            sapiente dolores non debitis
-          </p> */}
-        </div>
-        </div>
-
-
-        <div className={styles.servicebox}>
-        <div className={styles.icon} style={{backgroundColor:"#37ba82"}}>
-           < DiMongodb className={styles.ionicon}/>
-        </div>
-        <div className={styles.content}>
-          <h2>Mongo DB</h2>
-          {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-            accusamus possimus doloribus quaerat nulla nemo. Repudiandae animi,
-            sapiente dolores non debitis
-          </p> */}
-        </div>
-        </div>
-
-
-        <div className={styles.servicebox}>
-        <div className={styles.icon} style={{backgroundColor:"#cd57ff"}}>
-           <Image src="https://assets.website-files.com/61ca3f775a79ec5f87fcf937/6202fcdee5ee8636a145a41b_1234.png" className={styles.ionicon} h="80px" />
-        </div>
-        <div className={styles.content}>
-          <h2>Express js</h2>
-          {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-            accusamus possimus doloribus quaerat nulla nemo. Repudiandae animi,
-            sapiente dolores non debitis
-          </p> */}
-        </div>
-        </div>
-
-
-        <div className={styles.servicebox}>
-        <div className={styles.icon} style={{backgroundColor:"#4eb7ff"}}>
-           < FaNodeJs className={styles.ionicon}/>
-        </div>
-        <div className={styles.content}>
-          <h2>Node js</h2>
-          {/* <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-            accusamus possimus doloribus quaerat nulla nemo. Repudiandae animi,
-            sapiente dolores non debitis
-          </p> */}
-        </div>
-        </div>
+      <h2 className={"sectionHeading"} data-outline="Skills">
+        Skills
+      </h2>
+      <div className={styles.container}>
         
+        <div className={styles.card}>
+            <div className={styles.content}>
+                <img height="10px" src="https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png" alt=""/>
+                <h3>HTML</h3>
+                
+            </div>
+        </div>
 
-       
-      </div>
+        <div className={styles.card}>
+            <div className={styles.content}>
+                <img  src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png" alt=""/>
+                <h3>CSS</h3> 
+            </div>
+        </div>
+
+        <div className={styles.card}>
+            <div className={styles.content}>
+                <img height="20px" src="https://www.freepnglogos.com/uploads/javascript-png/javascript-logo-transparent-logo-javascript-images-3.png" alt=""/>
+                <h3>Javascript</h3> 
+            </div>
+        </div>
+
+        <div className={styles.card}>
+          <div className={styles.content}>
+            <h2>03</h2>
+                <img height="20px" src="./Images/react-400.png" alt=""/>
+                <h3>REACT</h3> 
+            </div>
+        </div>
+
+        <div className={styles.card}>
+            <div className={styles.content}>
+                <img height="20px" src="https://cdn.freebiesupply.com/logos/thumbs/2x/react-router-logo.png" alt=""/>
+                <h3>Router</h3> 
+            </div>
+        </div>
+
+        <div className={styles.card}>
+            <div className={styles.content}>
+                <img height="20px" src="https://w7.pngwing.com/pngs/724/234/png-transparent-redux-react-javascript-vue-js-single-page-application-others.png" alt=""/>
+                <h3>Redux</h3> 
+            </div>
+        </div>
+
+        <div className={styles.card}>
+            <div className={styles.content}>
+                <img height="20px" src="" alt=""/>
+                <h3>Mongo DB</h3> 
+            </div>
+        </div>
+
+        <div className={styles.card}>
+            <div className={styles.content}>
+                <img height="20px" src="" alt=""/>
+                <h3>Node js</h3> 
+            </div>
+        </div>
+
+        <div className={styles.card}>
+            <div className={styles.content}>
+                <img height="20px" src="" alt=""/>
+                <h3>Express</h3> 
+            </div>
+        </div>
+
+        <div className={styles.card}>
+            <div className={styles.content}>
+                <img height="20px" src="" alt=""/>
+                <h3>Java</h3> 
+            </div>
+        </div>
+    </div>
     </div>
   );
 };

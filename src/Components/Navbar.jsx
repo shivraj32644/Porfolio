@@ -8,13 +8,22 @@ import {
   useBreakpointValue,
   useOutsideClick,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "../Styles/Navbar.module.css";
 import Typewriter from "typewriter-effect";
 import { useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { RefContext } from "../Context/RefContext";
 export const Navbar = () => {
+  const {aboutRef,introRef,projectRef,resumeRef,skillRef,contactRef} = useContext(RefContext)
+ 
+
+
+  
+    
+
+
   const varient = useBreakpointValue({
     base: true,
     md: false,
@@ -54,22 +63,30 @@ export const Navbar = () => {
 
   const handleRef = (e) => {
     homeRef.current.style.borderBottom = "3px solid #4dbdfa";
+    introRef.current.scrollIntoView() 
+
     
   };
   const handleRef2 = (e) => {
     about.current.style.borderBottom = "3px solid #4dbdfa";
+    aboutRef.current.scrollIntoView() 
+
   };
   const handleRef3 = (e) => {
     skill.current.style.borderBottom = "3px solid #4dbdfa";
+    skillRef.current.scrollIntoView() 
   };
   const handleRef4 = (e) => {
     project.current.style.borderBottom = "3px solid #4dbdfa";
+    projectRef.current.scrollIntoView()   
   };
   const handleRef5 = (e) => {
     resume.current.style.borderBottom = "3px solid #4dbdfa";
+     resumeRef.current.scrollIntoView()   
   };
   const handleRef6 = (e) => {
     contect.current.style.borderBottom = "3px solid #4dbdfa";
+    contactRef.current.scrollIntoView()  
   };
   return (
     <Box className={styles.navbar}
@@ -160,7 +177,7 @@ export const Navbar = () => {
                 RESUME
               </Box>
               <Box onClick={handleRef6} ref={contect}>
-                CONTECT
+                CONTACT
               </Box>
               </Flex>
               </Flex>
