@@ -57,9 +57,10 @@ body::-webkit-scrollbar-track{
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background: rgb(80, 202, 246); */
 
 }
 
-#graph img{
+/* #graph img{
   height: 7.25rem;
-}
+} */

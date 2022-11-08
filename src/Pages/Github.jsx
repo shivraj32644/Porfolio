@@ -1,10 +1,16 @@
-import { Box, Button, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Image, Text, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import { useContext } from "react";
 import { Navbar } from "../Components/Navbar";
 import { RefContext } from "../Context/RefContext";
 import styles from "../Styles/Global.css";
 export const Resume = () => {
+  const variant = useBreakpointValue({
+    base: true,
+    md: false,
+    lg: false,
+  });
+
   const { githubRef } = useContext(RefContext);
   return (
     <Box ref={githubRef} pt="60px" pb={'40px'} >
@@ -42,8 +48,10 @@ export const Resume = () => {
           
         </Box>
 
-        <Box id="graph">
-          <img src="http://ghchart.rshah.org/4dbdfa/shivraj32644" alt="Github chart" />
+        <Box id="graph"
+        // h={}
+        >
+          <Image h={variant?"4.0rem":"7.25rem"} src="http://ghchart.rshah.org/shivraj32644" alt="Github chart" />
 
         </Box>
       </Box>

@@ -158,10 +158,12 @@ export const About = () => {
                     </Tbody>
                   </Table>
                 </TableContainer>
-              </ScaleFade>
-              <Button mt={"50px"} ml="15px" bg="#4dbdfa" color={"black"}>
+                </ScaleFade>
+                <a href="../../public/Shivraj_Dangi_Resume.pdf" download={'resume'}>
+              <Button mt={"20px"} ml="15px" bg="#4dbdfa" color={"black"}>
                 Download Resume
-              </Button>
+                  </Button>
+                  </a>
             </Box>
           </>
         )}
