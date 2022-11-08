@@ -16,6 +16,7 @@ import styles from "../Styles/Home.module.css";
 import Typewriter from "typewriter-effect";
 import { useContext } from "react";
 import { RefContext } from "../Context/RefContext";
+import gif from './Images/introGif.gif'
 
 export const Intro = () => {
   const { introRef } = useContext(RefContext);
@@ -152,7 +153,7 @@ export const Intro = () => {
         <Box w={"40%"}>
           <Image
             src={
-              "https://i.pinimg.com/originals/bb/37/5c/bb375cdd655184ca2715ac5059e73651.gif"
+              gif
             }
             alt="img2"
           />

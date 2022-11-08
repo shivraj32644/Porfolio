@@ -22,14 +22,16 @@ import { Contact } from "./Contact";
 export const Home = () => {
   
   return (
-    <Container bg={"#000"}  maxW={'86%'}>
+    <>
       <Navbar />
+    <Container bg={"#000"}  maxW={'86%'}>
       <Intro />
       <About />
       <Skills />
       <Project />
       <Resume />
       <Contact/>
-    </Container>
+      </Container>
+      </>
   );
 };

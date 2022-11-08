@@ -6,6 +6,7 @@ import { createContext } from 'react'
 export const RefContext = createContext();
 export const RefContextProvider = ({ children }) => {
   const [cur, SetCur] = useState("home");
+  const [MobileCur, SetMobileCur] = useState("home")
   const aboutRef = useRef(null);
   const introRef = useRef(null);
   const projectRef = useRef(null);
@@ -22,7 +23,9 @@ export const RefContextProvider = ({ children }) => {
     skillRef,
     contactRef,
     cur,
-    SetCur
+    SetCur,
+    MobileCur,
+    SetMobileCur
   }
   return (
       <RefContext.Provider value={valueObj}>{children }</RefContext.Provider>

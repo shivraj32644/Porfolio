@@ -13,14 +13,15 @@ import { NavLink } from "react-router-dom";
 import styles from "../Styles/Navbar.module.css";
 import Typewriter from "typewriter-effect";
 import { useRef } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+
 import { RefContext } from "../Context/RefContext";
+import { NavDrawer } from "./NavDrawer";
 export const Navbar = () => {
   const {cur, SetCur,aboutRef,introRef,projectRef,githubRef,skillRef,contactRef} = useContext(RefContext)
 
 
   // const h = aboutRef.current.offsetHeight
-  // console.log(h);
+
 
   
   let lastKnownScrollPosition = 0;
@@ -101,7 +102,8 @@ export const Navbar = () => {
       position='sticky'
       top={'0px'}
       backgroundColor ='#000'
-      h='80px'
+      // backgroundColor ='#000'
+      h='60px'
       zIndex={'600'}
       w={'100%'}
     
@@ -114,7 +116,7 @@ export const Navbar = () => {
         height="60px"
         display="flex"
         align="center"
-        justifyContent="space-between"
+        justifyContent="space-around"
       >
             <Center w="20%" h="40px" bg="transparent">
               <Heading fontSize={"22px"}>
@@ -131,7 +133,8 @@ export const Navbar = () => {
                 </Highlight>
               </Heading>
             </Center>{" "}
-              <AiOutlineMenu />{" "}
+              
+              <NavDrawer/>
               </Flex>
           </>
         ) : (

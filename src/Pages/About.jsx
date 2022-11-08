@@ -10,6 +10,7 @@ import {
 import React from "react";
 import { Navbar } from "../Components/Navbar";
 import styles from "../Styles/About.module.css";
+import shivrajImg from './Images/faviconWithoutBG.png'
 
 import {
   Table,
@@ -34,28 +35,44 @@ export const About = () => {
     lg: false,
   });
   return (
-    <Box ref={aboutRef} mt={'90px'} pt='90px' pb={'90px'}>
+    <Box ref={aboutRef} mt={'90px'} pt='90px' pb={'90px'} >
       <h2 ref={aboutRef} className={styles.sectionHeading} data-outline="About">
         About me
       </h2>
-      <Flex
-        margin="auto"
-        alignItems={"center"}
-        justifyContent='space-around'
-        mt={"-140px"}
-      >
+      
         {varient ? (
           <>
-            
-            <Box color={"white"} w={"664px"}>
-              <p style={{ color: "#999999", width: "80%", marginLeft: "15px" }}>
+          <Box
+        // margin="auto"
+            display={'flex'}
+        alignItems={"center"}
+            justifyContent='space-around'
+            flexDirection={'column'}
+        mt={"-100px"}
+      >
+             <Box
+                display='flex'
+                alignItems={'center'}
+                justifyContent='center'>
+                <Image
+                  h={"150px"}
+                borderRadius='50%'
+                  width={'150px'}
+                  objectFit={'cover'}
+                  // src="https://raw.githubusercontent.com/shivraj32644/Porfolio/main/public/favicon.png" alt="man" />
+                  src={shivrajImg} alt="man" />
+                
+
+            </Box>
+            <Box color={"white"} mt='20px' display={'flex'} flexDirection='column' >
+              <p style={{ color: "#999999", width: "80%", marginLeft: "30px", textAlign:'justify' }}>
               The function of a good software is to make the complex appear to be simple.
               </p>
               <ScaleFade initialScale={0.9} in>
                 <TableContainer>
                   <Table
                     className={styles.table}
-                    mt="40px"
+                    mt="20px"
                     mb={"20px"}
                     size={"sm"}
                     variant="unstyled"
@@ -91,14 +108,21 @@ export const About = () => {
                 </TableContainer>
               </ScaleFade>
               <a href="https://drive.google.com/file/d/1lAttLQ8_W4kJsezF6pR-h1lPBltgaIcR/view" target={"_blank"}>
-              <Button mt={"120px"} ml="15px" bg="#4dbdfa" color={"black"}>
+              <Button mt={"30px"} ml="15px" bg="#4dbdfa" color={"black"}>
                 Download Resume
                 </Button>
                 </a>
-            </Box>
+              </Box>
+              </Box>
           </>
         ) : (
           <>
+          <Flex
+        margin="auto"
+        alignItems={"center"}
+        justifyContent='space-around'
+        mt={"-140px"}
+      >
               <Box
                 w="36%"
                 // border={'1px solid white'}
@@ -112,7 +136,7 @@ export const About = () => {
                   // overflow='hidden'
                   objectFit={'contain'}
                   src="https://raw.githubusercontent.com/shivraj32644/Porfolio/main/public/favicon.png" alt="man" />
-                {/* <img src={process.env.PUBLIC_URL + './public/img2.png'} alt="logo" /> */}
+                
 
             </Box>
 
@@ -164,10 +188,11 @@ export const About = () => {
                 Download Resume
                   </Button>
                   </a>
-            </Box>
+              </Box>
+              </Flex>
           </>
         )}
-      </Flex>
+      
     </Box>
   );
 };
