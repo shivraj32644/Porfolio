@@ -111,7 +111,7 @@ export const About = () => {
                   width={'380px'}
                   // overflow='hidden'
                   objectFit={'contain'}
-                  src="https://i.imgur.com/hb7oZvr.jpg" alt="man" />
+                  src="https://raw.githubusercontent.com/shivraj32644/Porfolio/main/public/favicon.png" alt="man" />
                 {/* <img src={process.env.PUBLIC_URL + './public/img2.png'} alt="logo" /> */}
 
             </Box>
