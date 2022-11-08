@@ -49,8 +49,7 @@ export const About = () => {
             
             <Box color={"white"} w={"664px"}>
               <p style={{ color: "#999999", width: "80%", marginLeft: "15px" }}>
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
+              The function of a good software is to make the complex appear to be simple.
               </p>
               <ScaleFade initialScale={0.9} in>
                 <TableContainer>
@@ -91,9 +90,11 @@ export const About = () => {
                   </Table>
                 </TableContainer>
               </ScaleFade>
+              <a href="https://drive.google.com/file/d/1lAttLQ8_W4kJsezF6pR-h1lPBltgaIcR/view" target={"_blank"}>
               <Button mt={"120px"} ml="15px" bg="#4dbdfa" color={"black"}>
                 Download Resume
-              </Button>
+                </Button>
+                </a>
             </Box>
           </>
         ) : (
@@ -117,8 +118,7 @@ export const About = () => {
 
             <Box color={"white"} w={"664px"}>
               <p style={{ color: "#999999", width: "80%", marginLeft: "15px" }}>
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia.
+              The function of a good software is to make the complex appear to be simple.
               </p>
               <ScaleFade initialScale={0.9} in>
                 <TableContainer>
@@ -159,7 +159,7 @@ export const About = () => {
                   </Table>
                 </TableContainer>
                 </ScaleFade>
-                <a href="../../public/Shivraj_Dangi_Resume.pdf" download={'resume'}>
+                <a href="https://drive.google.com/file/d/1lAttLQ8_W4kJsezF6pR-h1lPBltgaIcR/view" target={'_blank'}>
               <Button mt={"20px"} ml="15px" bg="#4dbdfa" color={"black"}>
                 Download Resume
                   </Button>

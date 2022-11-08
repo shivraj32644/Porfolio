@@ -36,30 +36,30 @@ export const Navbar = () => {
   const github = useRef(null);
   const contect = useRef(null);
   // // const [isModalOpen, setIsModalOpen] = React.useState(false)
-  // useOutsideClick({
-  //   ref: homeRef,
-  //   handler: () => (homeRef.current.style.borderBottom = "none"),
-  // });
-  // useOutsideClick({
-  //   ref: about,
-  //   handler: () => (about.current.style.borderBottom = "none"),
-  // });
-  // useOutsideClick({
-  //   ref: skill,
-  //   handler: () => (skill.current.style.borderBottom = "none"),
-  // });
-  // useOutsideClick({
-  //   ref: project,
-  //   handler: () => (project.current.style.borderBottom = "none"),
-  // });
-  // useOutsideClick({
-  //   ref: github,
-  //   handler: () => (github.current.style.borderBottom = "none"),
-  // });
-  // useOutsideClick({
-  //   ref: contect,
-  //   handler: () => (contect.current.style.borderBottom = "none"),
-  // });
+  useOutsideClick({
+    ref: homeRef,
+    handler: () => (homeRef.current.style.borderBottom = "none"),
+  });
+  useOutsideClick({
+    ref: about,
+    handler: () => (about.current.style.borderBottom = "none"),
+  });
+  useOutsideClick({
+    ref: skill,
+    handler: () => (skill.current.style.borderBottom = "none"),
+  });
+  useOutsideClick({
+    ref: project,
+    handler: () => (project.current.style.borderBottom = "none"),
+  });
+  useOutsideClick({
+    ref: github,
+    handler: () => (github.current.style.borderBottom = "none"),
+  });
+  useOutsideClick({
+    ref: contect,
+    handler: () => (contect.current.style.borderBottom = "none"),
+  });
 
   const handleRef = (e) => {
     homeRef.current.style.borderBottom = "3px solid #4dbdfa";

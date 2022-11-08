@@ -44,7 +44,7 @@ export const Contact = () => {
         Contact
       </h2>
       <Box display="flex"  gap='20px' flexWrap={"wrap"} justifyContent='center' w="80%" margin={"auto"}>
-        <Box w={"220px"}
+        {/* <Box w={"220px"}
           p='20px'
           display='flex'
           flexDirection={'column'}
@@ -78,7 +78,7 @@ export const Contact = () => {
             <h2>ADDRESS</h2>
             <p style={{color:"#999999"}}>Indore, Madhya Pradesh</p>
           </Box>
-        </Box>
+        </Box> */}
 
         <a href="https://www.linkedin.com/in/shivraj-dangi-203892232/" target={'_blank'} >
         <Box w={"220px"}
@@ -86,8 +86,8 @@ export const Contact = () => {
           display='flex'
           flexDirection={'column'}
           alignItems={'center'}
-          h='160px'
-            justifyContent='space-between'
+          h='180px'
+            justifyContent='space-around'
             borderRadius={'8px'}
             boxShadow= "rgba(80, 202, 246, 0.84) 0px 2px 6px">
           <Box
@@ -121,8 +121,8 @@ export const Contact = () => {
           display='flex'
           flexDirection={'column'}
           alignItems={'center'}
-          h='160px'
-            justifyContent='space-between'
+          h='180px'
+            justifyContent='space-around'
             borderRadius={'8px'}
             boxShadow= "rgba(80, 202, 246, 0.84) 0px 2px 6px"
           >
@@ -158,8 +158,8 @@ export const Contact = () => {
           display='flex'
           flexDirection={'column'}
           alignItems={'center'}
-          h='160px'
-            justifyContent='space-between'
+          h='180px'
+            justifyContent='space-around'
             borderRadius={'8px'}
             boxShadow= "rgba(80, 202, 246, 0.84) 0px 2px 6px"
           >
