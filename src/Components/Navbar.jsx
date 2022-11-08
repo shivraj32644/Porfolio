@@ -16,77 +16,85 @@ import { useRef } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RefContext } from "../Context/RefContext";
 export const Navbar = () => {
-  const {aboutRef,introRef,projectRef,githubRef,skillRef,contactRef} = useContext(RefContext)
- 
+  const {cur, SetCur,aboutRef,introRef,projectRef,githubRef,skillRef,contactRef} = useContext(RefContext)
 
+
+  // const h = aboutRef.current.offsetHeight
+  // console.log(h);
 
   
+  let lastKnownScrollPosition = 0;
+  let ticking = false;
+  
+  function doSomething(scrollPos) {
+    // console.log(scrollPos)
+    if (scrollPos < 604) {
+      SetCur("home")
+    }
+    if (scrollPos > 605 && scrollPos < 1293) {
+      SetCur("about")
+    }
+    if (scrollPos >= 1293 && scrollPos < 1968) {
+      SetCur("skill")
+    }
+    if (scrollPos >= 1968 && scrollPos < 3943) {
+      SetCur("project")
+    }
+    if (scrollPos >= 3943 && scrollPos < 4800) {
+      SetCur("github")
+    }
+    if (lastKnownScrollPosition > 4800) {
+      SetCur("contact")
+    }
+  }
+  
+  document.addEventListener('scroll', (e) => {
+    lastKnownScrollPosition = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      doSomething(lastKnownScrollPosition);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
     
 
-
+  });
+ 
+ 
   const varient = useBreakpointValue({
     base: true,
     md: false,
     lg: false,
   });
-  const homeRef = useRef(null);
-  const about = useRef(null);
-  const skill = useRef(null);
-  const project = useRef(null);
-  const github = useRef(null);
-  const contect = useRef(null);
-  // // const [isModalOpen, setIsModalOpen] = React.useState(false)
-  useOutsideClick({
-    ref: homeRef,
-    handler: () => (homeRef.current.style.borderBottom = "none"),
-  });
-  useOutsideClick({
-    ref: about,
-    handler: () => (about.current.style.borderBottom = "none"),
-  });
-  useOutsideClick({
-    ref: skill,
-    handler: () => (skill.current.style.borderBottom = "none"),
-  });
-  useOutsideClick({
-    ref: project,
-    handler: () => (project.current.style.borderBottom = "none"),
-  });
-  useOutsideClick({
-    ref: github,
-    handler: () => (github.current.style.borderBottom = "none"),
-  });
-  useOutsideClick({
-    ref: contect,
-    handler: () => (contect.current.style.borderBottom = "none"),
-  });
 
   const handleRef = (e) => {
-    homeRef.current.style.borderBottom = "3px solid #4dbdfa";
     introRef.current.scrollIntoView() 
-
-    
+    SetCur("home")
   };
   const handleRef2 = (e) => {
-    about.current.style.borderBottom = "3px solid #4dbdfa";
     aboutRef.current.scrollIntoView() 
+    SetCur("about");
+  
 
   };
   const handleRef3 = (e) => {
-    skill.current.style.borderBottom = "3px solid #4dbdfa";
     skillRef.current.scrollIntoView() 
+    SetCur("skill")
   };
-  const handleRef4 = (e) => {
-    project.current.style.borderBottom = "3px solid #4dbdfa";
-    projectRef.current.scrollIntoView()   
+  const handleRef4 = (e) => { 
+    projectRef.current.scrollIntoView()  
+    SetCur("project")
   };
-  const handleRef5 = (e) => {
-    github.current.style.borderBottom = "3px solid #4dbdfa";
-     githubRef.current.scrollIntoView()   
+  const handleRef5 = (e) => {  
+    githubRef.current.scrollIntoView() 
+    SetCur("github")
   };
-  const handleRef6 = (e) => {
-    contect.current.style.borderBottom = "3px solid #4dbdfa";
+  const handleRef6 = (e) => { 
     contactRef.current.scrollIntoView()  
+    SetCur("contact")
   };
   return (
     <Box className={styles.navbar}
@@ -158,25 +166,25 @@ export const Navbar = () => {
                 h={"100%"}
                 transition='.5s'
               alignItems="center"
-              justifyContent={"space-around"}
-                // border={'1px solid white'}
+                justifyContent={"space-around"}
+                className='nav'
             >
-              <Box onClick={handleRef} ref={homeRef}>
+              <Box className="nav-item" onClick={handleRef} p='8px' borderBottom={cur==="home"?"3px solid #4dbdfa":"none"} >
                 HOME
               </Box>
-              <Box onClick={handleRef2} ref={about}>
+              <Box className="nav-item" onClick={handleRef2} p='8px' borderBottom={cur==="about"?"3px solid #4dbdfa":"none"} >
                 ABOUT
               </Box>
-              <Box onClick={handleRef3} ref={skill}>
+              <Box className="nav-item" onClick={handleRef3} p='8px' borderBottom={cur==="skill"?"3px solid #4dbdfa":"none"}>
                 SKILLS
               </Box>
-              <Box onClick={handleRef4} ref={project}>
+              <Box className="nav-item" onClick={handleRef4} p='8px' borderBottom={cur==="project"?"3px solid #4dbdfa":"none"} >
                 PROJECTS
               </Box>
-              <Box onClick={handleRef5} ref={github}>
+              <Box className="nav-item" onClick={handleRef5} p='8px' borderBottom={cur==="github"?"3px solid #4dbdfa":"none"} >
                 GITHUB
               </Box>
-              <Box onClick={handleRef6} ref={contect}>
+              <Box className="nav-item" onClick={handleRef6} p='8px' borderBottom={cur==="contact"?"3px solid #4dbdfa":"none"} >
                 CONTACT
               </Box>
               </Flex>

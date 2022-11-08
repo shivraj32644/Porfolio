@@ -3,7 +3,13 @@ import React, { useState } from "react";
 import styles from "../Styles/Skills.module.css";
 import { useContext } from "react";
 import { RefContext } from "../Context/RefContext";
-import {Image} from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
+import reactImg from './Images/react-400.png'
+import nodejsImg from './Images/nodejs.png'
+import routerImg from './Images/router3.png'
+import mongoImg from './Images/mongo.png'
+import javaImg from './Images/java.png'
+import expressImg from './Images/express.png'
 export const Skills = () => {
   const { skillRef } = useContext(RefContext);
 
@@ -38,50 +44,51 @@ export const Skills = () => {
 
         <div className={styles.card}>
           <div className={styles.content}>
-                      {/* <img src="./Images/react-400.png" alt="react-logo" /> */}
-                      <Image src='./Images/react-400.png' alt='' />
+                      <img src={reactImg} alt="react-logo" />
+                      {/* <Image src='./Images/react-400.png' alt='' /> */}
                 <h3>REACT</h3> 
             </div>
         </div>
 
         <div className={styles.card}>
             <div className={styles.content}>
-                <img  src="https://cdn.freebiesupply.com/logos/thumbs/2x/react-router-logo.png" alt=""/>
+                <img  src={routerImg} alt=""/>
+                
                 <h3>Router</h3> 
             </div>
         </div>
 
         <div className={styles.card}>
             <div className={styles.content}>
-                <img  src="https://w7.pngwing.com/pngs/724/234/png-transparent-redux-react-javascript-vue-js-single-page-application-others.png" alt=""/>
+                <img  src="https://github.com/shivraj32644/Porfolio/blob/main/public/redux.png?raw=true" alt=""/>
                 <h3>Redux</h3> 
             </div>
         </div>
 
         <div className={styles.card}>
             <div className={styles.content}>
-                <img  src="" alt=""/>
+                <img  src={mongoImg} alt=""/>
                 <h3>Mongo DB</h3> 
             </div>
         </div>
 
         <div className={styles.card}>
             <div className={styles.content}>
-                <img  src="" alt=""/>
+                <img  src={nodejsImg} alt=""/>
                 <h3>Node js</h3> 
             </div>
         </div>
 
         <div className={styles.card}>
             <div className={styles.content}>
-                <img  src="" alt=""/>
+                <img  src={expressImg} alt=""/>
                 <h3>Express</h3> 
             </div>
         </div>
 
         <div className={styles.card}>
             <div className={styles.content}>
-                <img  src="" alt=""/>
+                <img  src={javaImg} alt=""/>
                 <h3>Java</h3> 
             </div>
         </div>

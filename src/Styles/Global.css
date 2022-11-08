@@ -12,10 +12,23 @@ body::-webkit-scrollbar{
 }
 body::-webkit-scrollbar-thumb{
   background: #4dbdfa;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite;
   border-radius: 50px;
 }
 body::-webkit-scrollbar-track{
   background: #000;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 .sectionHeading {
     font-size: clamp(32px, 10vw, 128px);
@@ -65,3 +78,13 @@ body::-webkit-scrollbar-track{
 /* #graph img{
   height: 7.25rem;
 } */
+
+.nav{
+  transition: .5s;
+
+}
+
+.nav-item{
+  transition: .5s;
+  scale: 1,1;
+}

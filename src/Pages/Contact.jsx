@@ -87,7 +87,7 @@ export const Contact = () => {
           flexDirection={'column'}
           alignItems={'center'}
           h='180px'
-            justifyContent='space-around'
+            justifyContent='space-between'
             borderRadius={'8px'}
             boxShadow= "rgba(80, 202, 246, 0.84) 0px 2px 6px">
           <Box
@@ -110,7 +110,8 @@ export const Contact = () => {
             justifyContent="center"
             flexDirection={"column"}
           >
-            <h2>LinkedIn</h2>
+              <h2 >LinkedIn</h2>
+              <p style={{color:"#999999"}}>shivraj-dangi-203892232</p>
           </Box>
         </Box>
         </a>
@@ -122,7 +123,7 @@ export const Contact = () => {
           flexDirection={'column'}
           alignItems={'center'}
           h='180px'
-            justifyContent='space-around'
+            justifyContent='space-between'
             borderRadius={'8px'}
             boxShadow= "rgba(80, 202, 246, 0.84) 0px 2px 6px"
           >
@@ -147,7 +148,7 @@ export const Contact = () => {
             flexDirection={"column"}
           >
             <h2>GITHUB</h2>
-            {/* <p>Indore, Madhya Pradesh</p> */}
+            <p style={{color:"#999999"}}>shivraj32644</p>
           </Box>
           </Box>
           </a>
@@ -159,7 +160,7 @@ export const Contact = () => {
           flexDirection={'column'}
           alignItems={'center'}
           h='180px'
-            justifyContent='space-around'
+            justifyContent='space-between'
             borderRadius={'8px'}
             boxShadow= "rgba(80, 202, 246, 0.84) 0px 2px 6px"
           >
@@ -184,7 +185,7 @@ export const Contact = () => {
             flexDirection={"column"}
           >
             <h2>Twitter</h2>
-            {/* <p>Indore, Madhya Pradesh</p> */}
+            <p style={{color:"#999999"}}>Shivraj86224489</p>
           </Box>
         </Box>
         </a>
