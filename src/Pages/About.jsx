@@ -183,7 +183,7 @@ export const About = () => {
                       </Tr>
                       <Tr>
                         <Td>Address :</Td>
-                        <Td>Indore, Madhay Pradesh </Td>
+                        <Td>Indore, Madhya Pradesh </Td>
                       </Tr>
                       <Tr>
                         <Td>Zip Code :</Td>
