@@ -11,6 +11,8 @@ import React from "react";
 import { Navbar } from "../Components/Navbar";
 import styles from "../Styles/About.module.css";
 import shivrajImg from './Images/faviconWithoutBG.png'
+//  myimg from '~/public/faviconWithoutBG.png'
+
 
 import {
   Table,
@@ -26,6 +28,7 @@ import {
 import { useRef } from "react";
 import { useContext } from "react";
 import { RefContext } from "../Context/RefContext";
+import {motion} from 'framer-motion'
 
 export const About = () => {
   const { aboutRef } = useContext(RefContext);
@@ -36,9 +39,19 @@ export const About = () => {
   });
   return (
     <Box ref={aboutRef} mt={'90px'} pt='90px' pb={'90px'} >
-      <h2 ref={aboutRef} className={styles.sectionHeading} data-outline="About">
+      <motion.h2
+         initial={{ y: -50 ,opacity:0}}
+        whileInView={{ y: 0 ,opacity:1}}
+        viewport={{once:false, amount:1}}
+        transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 500
+          }}
+        
+        ref={aboutRef} className={styles.sectionHeading} data-outline="About">
         About me
-      </h2>
+      </motion.h2>
       
         {varient ? (
           <>
@@ -66,7 +79,7 @@ export const About = () => {
             </Box>
             <Box color={"white"} mt='20px' display={'flex'} flexDirection='column' >
               <p style={{ color: "#999999", width: "80%", marginLeft: "30px", textAlign:'justify' }}>
-              The function of a good software is to make the complex appear to be simple.
+              The function of a good software is to make the complex appear to be simple. - <i>Grady Booch</i> 
               </p>
               <ScaleFade initialScale={0.9} in>
                 <TableContainer>
@@ -81,7 +94,7 @@ export const About = () => {
                     <Tbody>
                       <Tr>
                         <Td>Name :</Td>
-                        <Td>Shivraj</Td>
+                        <Td>Shivraj Dangi</Td>
                       </Tr>
                       <Tr>
                         <Td>Date of Birth :</Td>
@@ -130,19 +143,24 @@ export const About = () => {
                 alignItems={'center'}
                 justifyContent='center'>
                 <Image
-                  h={"380px"}
-                  borderRadius='50%'
-                  width={'380px'}
+                  // h={"380px"}
+                  borderRadius='20%'
+                  // width={'380px'}
+                  width={'60%'}
+
                   // overflow='hidden'
-                  objectFit={'contain'}
-                  src="https://raw.githubusercontent.com/shivraj32644/Porfolio/main/public/favicon.png" alt="man" />
-                
+                  // objectFit={'contain'}
+                  // src="https://raw.githubusercontent.com/shivraj32644/Porfolio/main/public/favicon.png" alt="myimg" />
+                  src={ window.location.origin+"/favicon.png" } alt="myimg" />
+                  {/* // src={ process.env.PUBLIC_URL+"/favicon.png" } alt="myimg" /> */}
+                  {/* // src={ "%PUBLIC_URL%/faviconWithoutBG.png" } alt="myimg" /> */}
+                {/* process.env.PUBLIC_URL+"/favicon.png" */}
 
             </Box>
 
             <Box color={"white"} w={"664px"}>
               <p style={{ color: "#999999", width: "80%", marginLeft: "15px" }}>
-              The function of a good software is to make the complex appear to be simple.
+              The function of a good software is to make the complex appear to be simple. - <i>Grady Booch</i> 
               </p>
               <ScaleFade initialScale={0.9} in>
                 <TableContainer>
@@ -157,7 +175,7 @@ export const About = () => {
                     <Tbody>
                       <Tr>
                         <Td>Name :</Td>
-                        <Td>Shivraj</Td>
+                        <Td>Shivraj Dangi</Td>
                       </Tr>
                       <Tr>
                         <Td>Date of Birth :</Td>

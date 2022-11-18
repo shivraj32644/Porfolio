@@ -10,6 +10,7 @@
 }
 .containerTwo{
   font-size: 10px;
+  /* overflow: hidden; */
   /* padding-top: -180px; */
 }
 
@@ -35,6 +36,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* overflow: hidden; */
 }
 
 .containerTwo p {

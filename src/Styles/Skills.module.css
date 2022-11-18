@@ -84,24 +84,26 @@
   margin-top: 20px;
   box-shadow: 20px 20px 50px rgba(0,0,0,0.5) ;
   border-radius: 15px;
-  background: rgba(80, 169, 246, 0.1);
+  background: rgba(9, 55, 75, 0.1);
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(255,255,255,0.5);
-  border-left: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.5);
+  /* border-bottom: 1px solid rgba(255,255,255,0.5); */
   backdrop-filter: blur(5px);
   z-index: 900;
+  /* transition: .3s; */
 
 }
 .container .card:hover{
-  box-shadow :rgba(80, 202, 246, 0.44) 0px 5px 9px;
-  /* box-shadow: rgba(80, 202, 246, 0.16) 0px 10px 36px 0px, rgba(80, 202, 246, 0.06) 0px 0px 0px 1px; */
-  border-top: 2px solid rgba(80,202,246,0.5);
-  border-left: 2px solid rgba(80,202,246,0.5);
-  /* border: 0; */
+  /* box-shadow :rgba(80, 202, 246, 0.44) 0px 6px 9px;
+  box-shadow: rgba(80, 202, 246, 0.24) 0px 3px 8px; */
+  box-shadow: rgba(80, 202, 246, 0.4) 0px 0px 0px 2px, rgba(80, 202, 246, 0.65) 0px 4px 6px -1px, rgba(80, 202, 246, 0.08) 0px 1px 0px inset;
+ 
   background: none;
+  /* transition: .3s; */
+  transform: translateY(-10px);
 
 }
 .container .card .content {

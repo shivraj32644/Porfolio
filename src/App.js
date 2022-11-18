@@ -20,3 +20,12 @@ function App() {
 }
 
 export default App;
+
+
+
+/*
+How to import images from public folder
+
+
+
+*/

@@ -24,7 +24,7 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-    <Container bg={"#000"}  maxW={'86%'}>
+    <Container bg={"#000"} overflow="hidden"  maxW={'86%'}>
       <Intro />
       <About />
       <Skills />

@@ -4,6 +4,8 @@ import { useContext } from "react";
 import { Navbar } from "../Components/Navbar";
 import { RefContext } from "../Context/RefContext";
 import styles from "../Styles/Global.css";
+import {motion} from 'framer-motion'
+
 export const Resume = () => {
   const variant = useBreakpointValue({
     base: true,
@@ -14,9 +16,18 @@ export const Resume = () => {
   const { githubRef } = useContext(RefContext);
   return (
     <Box ref={githubRef} pt="60px" pb={'40px'} >
-      <h2 className="sectionHeading" data-outline="Github">
+      <motion.h2
+       initial={{ y: -50 ,opacity:0}}
+        whileInView={{ y: 0 ,opacity:1}}
+        viewport={{once:false, amount:1}}
+        transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 500
+          }}
+        className="sectionHeading" data-outline="Github">
         Github
-      </h2>
+      </motion.h2>
 
       <Box
         display={"flex"}
@@ -29,12 +40,39 @@ export const Resume = () => {
         <Box >
         <img src="https://github-profile-trophy.vercel.app/?username=shivraj32644" alt=""/>
         </Box>
-        <Box   display={'flex'} alignItems='center' flexWrap={'wrap'} columnGap={'15px'}>
-          <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=shivraj32644&theme=2077" alt="" />
-          <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=shivraj32644&theme=2077" alt="" />
+        <Box
+        
+        
+          display={'flex'} alignItems='center' flexWrap={'wrap'} columnGap={'15px'}>
+          <motion.img
+            initial={variant ? { x: 100,opacity:0 } : { x: 300 ,opacity:0} }
+          whileInView={{ x: 0, opacity:1 }}
+            whileHover={{ y: -5 }}
+            viewport={{ once: false, amount: .7 }}
+          transition={{ duration: 1, type: "spring", stiffness: 200 }}
+          
+            src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=shivraj32644&theme=2077" alt="" />
+          <motion.img
+             initial={variant ? { x: -100 ,opacity:0} : { x: -300,opacity:0 }}
+          whileInView={{ x: 0, opacity:1 }}
+            whileHover={{ y: -5 }}
+            viewport={{ once: false, amount: .7 }}
+          transition={{ duration: 1, type: "spring", stiffness: 200 }}
+            
+            src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=shivraj32644&theme=2077" alt="" />
         </Box>
-        <Box >
-          <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=shivraj32644&theme=2077" alt="" />
+        <Box
+        
+        
+        >
+          <motion.img
+            initial={{opacity:0}}
+            whileInView={{ opacity: 1, rotateX: [0,360]  }}
+            whileHover={{ y: -5 }}
+            viewport={{ once: false, amount: .7 }}
+          transition={{ duration: 1, type: "spring", stiffness: 200 }}
+            
+            src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=shivraj32644&theme=2077" alt="" />
 
         </Box>
         <Box

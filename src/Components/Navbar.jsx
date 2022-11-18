@@ -13,7 +13,7 @@ import { NavLink } from "react-router-dom";
 import styles from "../Styles/Navbar.module.css";
 import Typewriter from "typewriter-effect";
 import { useRef } from "react";
-
+import style from '../Styles/Global.css'
 import { RefContext } from "../Context/RefContext";
 import { NavDrawer } from "./NavDrawer";
 export const Navbar = () => {
@@ -172,22 +172,22 @@ export const Navbar = () => {
                 justifyContent={"space-around"}
                 className='nav'
             >
-              <Box className="nav-item" onClick={handleRef} p='8px' borderBottom={cur==="home"?"3px solid #4dbdfa":"none"} >
+              <Box id="navItem" onClick={handleRef} p='8px' borderBottom={cur==="home"?"3px solid #4dbdfa":"none"} >
                 HOME
               </Box>
-              <Box className="nav-item" onClick={handleRef2} p='8px' borderBottom={cur==="about"?"3px solid #4dbdfa":"none"} >
+              <Box id="navItem" onClick={handleRef2} p='8px' borderBottom={cur==="about"?"3px solid #4dbdfa":"none"} >
                 ABOUT
               </Box>
-              <Box className="nav-item" onClick={handleRef3} p='8px' borderBottom={cur==="skill"?"3px solid #4dbdfa":"none"}>
+              <Box id="navItem" onClick={handleRef3} p='8px' borderBottom={cur==="skill"?"3px solid #4dbdfa":"none"}>
                 SKILLS
               </Box>
-              <Box className="nav-item" onClick={handleRef4} p='8px' borderBottom={cur==="project"?"3px solid #4dbdfa":"none"} >
+              <Box id="navItem" onClick={handleRef4} p='8px' borderBottom={cur==="project"?"3px solid #4dbdfa":"none"} >
                 PROJECTS
               </Box>
-              <Box className="nav-item" onClick={handleRef5} p='8px' borderBottom={cur==="github"?"3px solid #4dbdfa":"none"} >
+              <Box id="navItem" onClick={handleRef5} p='8px' borderBottom={cur==="github"?"3px solid #4dbdfa":"none"} >
                 GITHUB
               </Box>
-              <Box className="nav-item" onClick={handleRef6} p='8px' borderBottom={cur==="contact"?"3px solid #4dbdfa":"none"} >
+              <Box id="navItem" onClick={handleRef6} p='8px' borderBottom={cur==="contact"?"3px solid #4dbdfa":"none"} >
                 CONTACT
               </Box>
               </Flex>

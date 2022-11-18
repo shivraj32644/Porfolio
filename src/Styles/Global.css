@@ -6,6 +6,7 @@ body{
     /* padding: 0; */
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    /* cursor: url('../Pages/Images/cursor.png'); */
 }
 body::-webkit-scrollbar{
   width: 10px;
@@ -78,13 +79,3 @@ body::-webkit-scrollbar-track{
 /* #graph img{
   height: 7.25rem;
 } */
-
-.nav{
-  transition: .5s;
-
-}
-
-.nav-item{
-  transition: .5s;
-  scale: 1,1;
-}

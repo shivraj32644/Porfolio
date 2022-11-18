@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { RefContext } from "../Context/RefContext";
 import styles from "../Styles/Global.css";
@@ -7,7 +7,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
-
+import {motion} from 'framer-motion'
 const data = [
   {
     title: "ADDRESS",
@@ -37,51 +37,44 @@ const data = [
 ]
 
 export const Contact = () => {
+  const variant = useBreakpointValue({
+    base: true,
+    md: false,
+    lg: false,
+  });
   const { contactRef } = useContext(RefContext);
   return (
     <Box pt="50px" pb={"50px"} ref={contactRef}>
-      <h2 className={"sectionHeading"} data-outline="Contact">
+      <motion.h2
+        initial={{ y: -50 ,opacity:0}}
+        whileInView={{ y: 0 ,opacity:1}}
+        viewport={{once:false, amount:1}}
+        transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 500
+          }}
+        
+        className={"sectionHeading"} data-outline="Contact">
         Contact
-      </h2>
-      <Box display="flex"  gap='20px' flexWrap={"wrap"} justifyContent='center' w="80%" margin={"auto"}>
-        {/* <Box w={"220px"}
-          p='20px'
-          display='flex'
-          flexDirection={'column'}
-          alignItems={'center'}
-          h='180px'
-          justifyContent='space-between'
-          borderRadius={'8px'}
-            boxShadow= "rgba(80, 202, 246, 0.84) 0px 2px 6px"
-          
-        >
-          <Box
-            bgColor={"#1a1a1a"}
-            borderRadius="50%"
-            h={"80px"}
-            w="80px"
-            color={"#4dbdfa"}
-            display="flex"
-            alignItems={"center"}
-            justifyContent="center"
-            fontSize={"35px"}
-          >
-            <TfiDirectionAlt />
-          </Box>
-          <Box
-            color={"#fff"}
-            display="flex"
-            alignItems={"center"}
-            justifyContent="center"
-            flexDirection={"column"}
-          >
-            <h2>ADDRESS</h2>
-            <p style={{color:"#999999"}}>Indore, Madhya Pradesh</p>
-          </Box>
-        </Box> */}
+      </motion.h2>
+      <Box display="flex"
+        gap='20px'
+        flexWrap={"wrap"}
+        justifyContent='center'
+        w="80%"
+        margin={"auto"}
+        
+      >
+        
 
         <a href="https://www.linkedin.com/in/shivraj-dangi-203892232/" target={'_blank'} >
-        <Box w={"220px"}
+          <Box w={"220px"}
+            as={motion.div}
+            initial={variant ? { x: -100 } : { x: -200 }}
+          whileInView={{ x: 0,  }}
+          whileHover={{ y: -15 }}
+          transition={{ duration: 1, type: "spring", stiffness: 300 }}
         p='20px'
           display='flex'
           flexDirection={'column'}
@@ -117,7 +110,12 @@ export const Contact = () => {
         </a>
 
         <a href="https://github.com/shivraj32644" target={'_blank'} >
-        <Box w={"220px"}
+          <Box w={"220px"}
+             as={motion.div}
+            initial={variant ? { x: 100 } : { x: -200 }}
+          whileInView={{ x: 0,  }}
+          whileHover={{ y: -15 }}
+          transition={{ duration: 1, type: "spring", stiffness: 300 }}
         p='20px'
           display='flex'
           flexDirection={'column'}
@@ -154,7 +152,12 @@ export const Contact = () => {
           </a>
 
           <a href="https://twitter.com/Shivraj86224489" target={'_blank'} >
-        <Box w={"220px"}
+          <Box w={"220px"}
+             as={motion.div}
+            initial={variant ? { x: -100 } : { x: 200 }}
+          whileInView={{ x: 0,  }}
+          whileHover={{ y: -15 }}
+          transition={{ duration: 1, type: "spring", stiffness: 300 }}
         p='20px'
           display='flex'
           flexDirection={'column'}
@@ -191,7 +194,12 @@ export const Contact = () => {
         </a>
 
         <a href="mailto:shivraj32644@gmail.com" target={'_blank'} >
-        <Box w={"220px"}
+          <Box w={"220px"}
+             as={motion.div}
+            initial={variant ? { x: 100 } : { x: 200 }}
+          whileInView={{ x: 0,  }}
+          whileHover={{ y: -15 }}
+          transition={{ duration: 1, type: "spring", stiffness: 300 }}
         p='20px'
           display='flex'
           flexDirection={'column'}
