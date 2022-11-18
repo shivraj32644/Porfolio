@@ -22,52 +22,46 @@ export const Skills = () => {
     console.log("hello");
   };
   const { skillRef } = useContext(RefContext);
-  // const cardVariants: Variants = {
-  //     offscreen: {
-  //       y: 300
-  //     },
-  //     onscreen: {
-  //       y: 50,
-  //       rotate: -10,
-  //       transition: {
-  //         type: "spring",
-  //         bounce: 0.4,
-  //         duration: 0.8
-  //       }
-  //     }
-  //   };
+  const scrollItem={
+      offscreen: {
+      y: 100,
+        opacity:0
+      },
+      onscreen: {
+        y: 0,
+        opacity:1,
+        transition: {
+          duration: 0.4
+        },
+        viewport:{once:false,amount:1}
+      }
+    };
 
   return (
     <motion.div ref={skillRef} id={styles.mainBox}>
       <motion.h2
-        initial={{ y: -50, opacity: 0 }}
+        initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: false, amount: 1 }}
         transition={{
-          duration: 3.5,
-          type: "spring",
-          stiffness: 500,
+          duration: .5,
         }}
         className={"sectionHeading"}
         data-outline="Skills"
       >
         Skills
       </motion.h2>
+{/* =========================================================================================================================================== */}
       <div className={styles.container}>
         <motion.div
           className={styles.card}
-          initial={variant ? { x: 50 } : { x: -200 ,opacity:0 , rotate:180}}
-          whileInView={{ x: 0,opacity:1, rotate:0 }}
           
-          // animate={{ rotate: 360 }}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
-          transition={{
-            duration: 1,
-            type: "spring",
-            stiffness: 300,
-            // bounce:.5
-          }}
-          //  onViewportLeave={{x:"-100px"}}
+          // viewport={{ once: false, amount: 1 }}
+          
         >
           <div className={styles.content}>
             <img
@@ -80,12 +74,10 @@ export const Skills = () => {
 
         <motion.div
           className={styles.card}
-          initial={variant ? { x: -50 } : { x: -200 }}
-          whileInView={{ x: 0,  }}
-          
-          // animate={{rotate:360}}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
-          transition={{ duration: 1, type: "spring", stiffness: 300 }}
         >
           <div className={styles.content}>
             <img
@@ -98,12 +90,10 @@ export const Skills = () => {
 
         <motion.div
           className={styles.card}
-          initial={variant ? { x: 50 } : { x: -200 }}
-          whileInView={{ x: 0,  }}
-          
-          animate={{ rotate: 360 }}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
-          transition={{ duration: 1, type: "spring", stiffness: 300 }}
         >
           <div className={styles.content}>
             <img
@@ -116,12 +106,10 @@ export const Skills = () => {
 
         <motion.div
           className={styles.card}
-          initial={variant ? { x: -50 } : { x: -200 }}
-          whileInView={{ x: 0,  }}
-          
-          animate={{ rotate: 360 }}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
-          transition={{ duration: 1, type: "spring", stiffness: 300 }}
         >
           <div className={styles.content}>
             <img src={reactImg} alt="react-logo" />
@@ -132,12 +120,10 @@ export const Skills = () => {
 
         <motion.div
           className={styles.card}
-          initial={variant ? { x: 50 } : { x: -200 }}
-          whileInView={{ x: 0,  }}
-          
-          animate={{ rotate: 360 }}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
-          transition={{ type: "spring", stiffness: 300, duration: 1 }}
 
           // transition={{}}
         >
@@ -148,14 +134,14 @@ export const Skills = () => {
           </div>
         </motion.div>
 
+        
+{/*=============================================================================================================================================================  */}
         <motion.div
           className={styles.card}
-          initial={variant ? { x: -50 } : { x: 100 ,opacity:0}}
-          whileInView={{ x: 0,opacity:1  }}
-          viewport={{ once: false, amount: .7 }}
-          animate={{ rotate: 360 }}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
-          transition={{ type: "spring", stiffness: 300, duration: 1 }}
         >
           <div className={styles.content}>
             <img
@@ -168,12 +154,10 @@ export const Skills = () => {
 
         <motion.div
           className={styles.card}
-          initial={variant ? { x: 50 } : { x: 300 ,opacity:0}}
-          whileInView={{ x: 0,opacity:1 }}
-          viewport={{ once: false, amount: .7 }}
-          animate={{ rotate: 360 }}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
-          transition={{ type: "spring", stiffness: 300, duration: 1 }}
         >
           <div className={styles.content}>
             <img src={mongoImg} alt="" />
@@ -183,12 +167,10 @@ export const Skills = () => {
 
         <motion.div
           className={styles.card}
-          initial={variant ? { x: -50 } : { x: 300,opacity:0 }}
-          whileInView={{ x: 0,opacity:1  }}
-          viewport={{ once: false, amount: .7 }}
-          animate={{ rotate: 360 }}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
-          transition={{ type: "spring", stiffness: 300, duration: 1 }}
         >
           <div className={styles.content}>
             <img src={nodejsImg} alt="" />
@@ -198,13 +180,9 @@ export const Skills = () => {
 
         <motion.div
           className={styles.card}
-          // initial={variant ? { x: '100px' }:{x:"200px"}}
-          // whileInView={{x:0}}
-          initial={variant ? { x: 50 } : { x: 300 ,opacity:0}}
-          whileInView={{ x: 0, opacity:1 }}
-          viewport={{ once: false, amount: .7 }}
-          animate={{ rotate: 360 }}
-          transition={{ type: "spring", stiffness: 300, duration: 1 }}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
         >
           <div className={styles.content}>
@@ -215,11 +193,9 @@ export const Skills = () => {
 
         <motion.div
           className={styles.card}
-          initial={variant ? { x: 50 } : { x: 100 ,opacity:0}}
-          whileInView={{ x: 0, opacity:1 }}
-          viewport={{ once: false, amount: .7 }}
-          animate={{ rotate: 360 }}
-          transition={{ type: "spring", stiffness: 300, duration: 1 }}
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={scrollItem}
           whileHover={{ y: -15 }}
         >
           <div className={styles.content}>

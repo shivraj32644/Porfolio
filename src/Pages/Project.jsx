@@ -12,13 +12,11 @@ export const Project = () => {
       <section id={styles.projects}>
         <div>
           <motion.h2
-               initial={{ y: -50, opacity: 0 }}
+                initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false, amount: .8 }}
+        viewport={{ once: false, amount: 1 }}
         transition={{
-          duration: 3.5,
-          type: "spring",
-          stiffness: 300,
+          duration: .5,
         }}
           
             className={"sectionHeading"} data-outline="Projects">

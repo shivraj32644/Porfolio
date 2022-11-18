@@ -29,6 +29,7 @@ import { useRef } from "react";
 import { useContext } from "react";
 import { RefContext } from "../Context/RefContext";
 import {motion} from 'framer-motion'
+import shiv from './Images/shivraj.png'
 
 export const About = () => {
   const { aboutRef } = useContext(RefContext);
@@ -40,14 +41,12 @@ export const About = () => {
   return (
     <Box ref={aboutRef} mt={'90px'} pt='90px' pb={'90px'} >
       <motion.h2
-         initial={{ y: -50 ,opacity:0}}
-        whileInView={{ y: 0 ,opacity:1}}
-        viewport={{once:false, amount:1}}
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 1 }}
         transition={{
-            duration: 1.5,
-            type: "spring",
-            stiffness: 500
-          }}
+          duration: .8,
+        }}
         
         ref={aboutRef} className={styles.sectionHeading} data-outline="About">
         About me
@@ -61,7 +60,7 @@ export const About = () => {
         alignItems={"center"}
             justifyContent='space-around'
             flexDirection={'column'}
-        mt={"-100px"}
+        mt={"-90px"}
       >
              <Box
                 display='flex'
@@ -134,7 +133,7 @@ export const About = () => {
         margin="auto"
         alignItems={"center"}
         justifyContent='space-around'
-        mt={"-140px"}
+        mt={"-100px"}
       >
               <Box
                 w="36%"
@@ -151,7 +150,8 @@ export const About = () => {
                   // overflow='hidden'
                   // objectFit={'contain'}
                   // src="https://raw.githubusercontent.com/shivraj32644/Porfolio/main/public/favicon.png" alt="myimg" />
-                  src={ window.location.origin+"/favicon.png" } alt="myimg" />
+                  // src={ window.location.origin+"/favicon.png" } alt="myimg" />
+                  src={ shiv} alt="myimg" />
                   {/* // src={ process.env.PUBLIC_URL+"/favicon.png" } alt="myimg" /> */}
                   {/* // src={ "%PUBLIC_URL%/faviconWithoutBG.png" } alt="myimg" /> */}
                 {/* process.env.PUBLIC_URL+"/favicon.png" */}

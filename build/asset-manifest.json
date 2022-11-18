@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Porfolio/static/css/main.a1b7bc86.css",
+    "main.js": "/Porfolio/static/js/main.2680c984.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Porfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/shivraj.png": "/Porfolio/static/media/shivraj.209d138903fe094edb0f.png",
+    "static/media/introGif.gif": "/Porfolio/static/media/introGif.08789c44ac509d369ce4.gif",
+    "static/media/faviconWithoutBG.png": "/Porfolio/static/media/faviconWithoutBG.94eb120084fc662f2d41.png",
+    "static/media/java.png": "/Porfolio/static/media/java.a8fdeb516585a40843a1.png",
+    "static/media/react-400.png": "/Porfolio/static/media/react-400.e767d58738285206407e.png",
+    "static/media/express.png": "/Porfolio/static/media/express.04e4743fbd704db71ed7.png",
+    "static/media/mongo.png": "/Porfolio/static/media/mongo.c964002ecef4971216d0.png",
+    "static/media/router3.png": "/Porfolio/static/media/router3.4af214a2a376349fdbee.png",
+    "index.html": "/Porfolio/index.html",
+    "main.a1b7bc86.css.map": "/Porfolio/static/css/main.a1b7bc86.css.map",
+    "main.2680c984.js.map": "/Porfolio/static/js/main.2680c984.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Porfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1b7bc86.css",
+    "static/js/main.2680c984.js"
+  ]
+}

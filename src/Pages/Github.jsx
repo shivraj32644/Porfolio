@@ -17,14 +17,12 @@ export const Resume = () => {
   return (
     <Box ref={githubRef} pt="60px" pb={'40px'} >
       <motion.h2
-       initial={{ y: -50 ,opacity:0}}
-        whileInView={{ y: 0 ,opacity:1}}
-        viewport={{once:false, amount:1}}
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 1 }}
         transition={{
-            duration: 1.5,
-            type: "spring",
-            stiffness: 500
-          }}
+          duration: .5,
+        }}
         className="sectionHeading" data-outline="Github">
         Github
       </motion.h2>
