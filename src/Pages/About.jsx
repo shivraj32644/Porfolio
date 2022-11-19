@@ -151,7 +151,6 @@ export const About = () => {
                   // width={'380px'}
                   width={'60%'}
 
-                  // overflow='hidden'
                   // objectFit={'contain'}
                   // src="https://raw.githubusercontent.com/shivraj32644/Porfolio/main/public/favicon.png" alt="myimg" />
                   // src={ window.location.origin+"/favicon.png" } alt="myimg" />

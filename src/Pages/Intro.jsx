@@ -41,7 +41,6 @@ export const Intro = () => {
         color="#fff"
         
         // display={'flex'}
-        // flexWrap={'wrap'}
       >
         {varient ? (
           <>
