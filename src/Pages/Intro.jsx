@@ -40,7 +40,6 @@ export const Intro = () => {
         borderRadius={"8px"}
         color="#fff"
         
-        // display={'flex'}
       >
         {varient ? (
           <>
