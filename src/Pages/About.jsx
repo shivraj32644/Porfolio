@@ -60,7 +60,9 @@ export const About = () => {
         alignItems={"center"}
             justifyContent='space-around'
             flexDirection={'column'}
-        mt={"-90px"}
+            mt={"-90px"}
+            // border='1px solid white'
+            // overflow={""}
       >
              <Box
                 display='flex'
@@ -89,6 +91,8 @@ export const About = () => {
                     size={"sm"}
                     variant="unstyled"
                     w={"80px"}
+                    display='flex'
+                    
                   >
                     <Tbody>
                       <Tr>
@@ -101,7 +105,7 @@ export const About = () => {
                       </Tr>
                       <Tr>
                         <Td>Address :</Td>
-                        <Td>Indore, Madhay Pradesh </Td>
+                        <Td>Indore, Madhya Pradesh </Td>
                       </Tr>
                       <Tr>
                         <Td>Zip Code :</Td>
@@ -109,11 +113,11 @@ export const About = () => {
                       </Tr>
                       <Tr>
                         <Td>Email :</Td>
-                        <Td> shivraj32644@gmail.com </Td>
+                        <Td>shivraj32644@gmail.com </Td>
                       </Tr>
                       <Tr>
                         <Td>Mobile :</Td>
-                        <Td> +91 8359900115 </Td>
+                        <Td>+91 8359900115 </Td>
                       </Tr>
                     </Tbody>
                   </Table>

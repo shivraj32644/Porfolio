@@ -6,6 +6,7 @@ import {
   Heading,
   HStack,
   Image,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
@@ -20,11 +21,15 @@ import { RefContext } from "../Context/RefContext";
 import { Contact } from "./Contact";
 
 export const Home = () => {
-  
+  const variant = useBreakpointValue({
+    base: true,
+    md: false,
+    lg: false,
+  });
   return (
     <>
       <Navbar />
-    <Container bg={"#000"} overflow="hidden"  maxW={'86%'}>
+    <Container bg={"#000"} overflow="hidden"  maxW={ variant ? "100%" :"86%" }>
       <Intro />
       <About />
       <Skills />

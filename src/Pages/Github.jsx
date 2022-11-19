@@ -15,7 +15,7 @@ export const Resume = () => {
 
   const { githubRef } = useContext(RefContext);
   return (
-    <Box ref={githubRef} pt="60px" pb={'40px'} >
+    <Box ref={githubRef} mt="-140px" pb={'40px'} >
       <motion.h2
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -43,7 +43,7 @@ export const Resume = () => {
         
           display={'flex'} alignItems='center' flexWrap={'wrap'} columnGap={'15px'}>
           <motion.img
-            initial={variant ? { x: 100,opacity:0 } : { x: 300 ,opacity:0} }
+            initial={variant ? { x: 50,opacity:0 } : { x: 300 ,opacity:0} }
           whileInView={{ x: 0, opacity:1 }}
             whileHover={{ y: -5 }}
             viewport={{ once: false, amount: .7 }}
@@ -51,7 +51,7 @@ export const Resume = () => {
           
             src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=shivraj32644&theme=2077" alt="" />
           <motion.img
-             initial={variant ? { x: -100 ,opacity:0} : { x: -300,opacity:0 }}
+             initial={variant ? { x: -50 ,opacity:0} : { x: -300,opacity:0 }}
           whileInView={{ x: 0, opacity:1 }}
             whileHover={{ y: -5 }}
             viewport={{ once: false, amount: .7 }}
