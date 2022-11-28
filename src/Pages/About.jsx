@@ -80,7 +80,9 @@ export const About = () => {
             </Box>
             <Box color={"white"} mt='20px' display={'flex'} flexDirection='column' >
               <p style={{ color: "#999999", width: "80%", marginLeft: "30px", textAlign:'justify' }}>
-              The function of a good software is to make the complex appear to be simple. - <i>Grady Booch</i> 
+              An enthusiastic Full Stack Web Developer with a strong set of technical as
+              well as non-technical skills and a dedication towards creating useful and
+              interactive web applications using MERN stack. 
               </p>
               <ScaleFade initialScale={0.9} in>
                 <TableContainer>
@@ -142,19 +144,24 @@ export const About = () => {
               <Box
                 w="36%"
                 // border={'1px solid white'}
+                // height={'400px'}
                 display='flex'
                 alignItems={'center'}
                 justifyContent='center'>
                 <Image
                   // h={"380px"}
-                  borderRadius='20%'
+                  borderRadius='10px'
                   // width={'380px'}
+                  bg={'#4bb5ee15'}
                   width={'60%'}
+                  height='50%'
 
+                  objectFit={'scale-down'}
+                  // p={'20px'}
                   // objectFit={'contain'}
                   // src="https://raw.githubusercontent.com/shivraj32644/Porfolio/main/public/favicon.png" alt="myimg" />
                   // src={ window.location.origin+"/favicon.png" } alt="myimg" />
-                  src={ shiv} alt="myimg" />
+                  src={ shivrajImg} alt="myimg" />
                   {/* // src={ process.env.PUBLIC_URL+"/favicon.png" } alt="myimg" /> */}
                   {/* // src={ "%PUBLIC_URL%/faviconWithoutBG.png" } alt="myimg" /> */}
                 {/* process.env.PUBLIC_URL+"/favicon.png" */}
@@ -162,9 +169,18 @@ export const About = () => {
             </Box>
 
             <Box color={"white"} w={"664px"}>
-              <p style={{ color: "#999999", width: "80%", marginLeft: "15px" }}>
-              The function of a good software is to make the complex appear to be simple. - <i>Grady Booch</i> 
-              </p>
+                <motion.p
+                  initial={{  opacity: 0 }}
+                  whileInView={{  opacity: 1 }}
+                  viewport={{ once: false, amount: 1 }}
+                  transition={{
+                    duration: .8,
+                  }}
+                  style={{ color: "#999999", width: "80%", marginLeft: "15px" }}>
+              An enthusiastic Full Stack Web Developer with a strong set of technical as
+              well as non-technical skills and a dedication towards creating useful and
+              interactive web applications using MERN stack.
+              </motion.p>
               <ScaleFade initialScale={0.9} in>
                 <TableContainer>
                   <Table

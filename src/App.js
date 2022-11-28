@@ -2,6 +2,7 @@
 import { Box } from '@chakra-ui/react';
 
 import { motion } from "framer-motion";
+import { useRef } from 'react';
 import { Navbar } from './Components/Navbar';
 import { About } from './Pages/About';
 import { Contact } from './Pages/Contact';
@@ -14,6 +15,7 @@ import styles from './Styles/Global.css'
 function App() {
   return (
     <Box bg='#000' >
+      
       <Home></Home>
    </Box>
   );

@@ -29,7 +29,7 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-    <Container bg={"#000"} overflow="hidden"  maxW={ variant ? "100%" :"86%" }>
+    <Container bg={"#000"} overflow="hidden"  maxW={ variant ? "96%" :"86%" }>
       <Intro />
       <About />
       <Skills />

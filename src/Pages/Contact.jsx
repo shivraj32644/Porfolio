@@ -8,32 +8,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
-const data = [
-  {
-    title: "ADDRESS",
-    des: "Indore, Madhya Pradesh",
-  },
-  {
-    title: "LINKEDIN",
-    des: "Indore, Madhya Pradesh",
-  },
-  {
-    title: "GITHUB",
-    des: "Indore, Madhya Pradesh",
-  },
-  {
-    title: "TWITTER",
-    des: "Indore, Madhya Pradesh",
-  },
-  {
-    title: "MOBILE",
-    des: "Indore, Madhya Pradesh",
-  },
-  {
-    title: "EMAIL",
-    des: "Indore, Madhya Pradesh",
-  },
-];
+
 
 export const Contact = () => {
   const variant = useBreakpointValue({

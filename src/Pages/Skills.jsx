@@ -34,7 +34,8 @@ export const Skills = () => {
         //   duration: 0.4
         // },
         // viewport:{once:false,amount:1}
-      }
+    }
+    
     };
 
   return (
@@ -93,6 +94,7 @@ export const Skills = () => {
           initial={"offscreen"}
           whileInView={"onscreen"}
           variants={scrollItem}
+          // exit={{ opacity: 0 }}
           whileHover={{ y: -15 }}
         >
           <div className={styles.content}>

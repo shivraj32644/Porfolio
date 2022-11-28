@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { RefContext } from "../Context/RefContext";
 import styles from "../Styles/Projects.module.css";
 import { motion } from "framer-motion";
-import olxImage from './Images/olx-clone.png' 
+import jiomartImg from "./Images/jiomart.png";
 
 export const Project = () => {
   const { projectRef } = useContext(RefContext);
@@ -54,7 +54,11 @@ export const Project = () => {
                     <li>Cart Page</li>
                     <li>Checkout Page</li>
                   </ul>
-                  <h2>Tech Stack: HTML | CSS | Javascript | Local Storage</h2>
+                  <h2><b><i> Tech Stack :</i></b> HTML | CSS | Javascript | Local Storage</h2>
+                  <h2>
+                   <b><i> Area of Responsibility :</i></b> Developed the product page and
+                    navigation bar
+                  </h2>
                 </p>
                 <div className={styles.buttons}>
                   <a
@@ -74,7 +78,7 @@ export const Project = () => {
                 </div>
               </div>
             </motion.div>
-{/* ========================================================================================================================================= */}
+            {/* ========================================================================================================================================= */}
             <motion.div
               className={styles.item}
               initial={{ x: -70, opacity: 0 }}
@@ -107,7 +111,11 @@ export const Project = () => {
                     <li>Ticket System</li>
                   </ul>
                   <h2>
-                    Tech Stack: HTML | CSS | Javascript | JSON-Server | API{" "}
+                   <b><i>Tech Stack :</i></b>  HTML | CSS | Javascript | JSON-Server | API{" "}
+                  </h2>
+                  <h2>
+                   <b><i>Area of Responsibility :</i></b>  Contributed to the creation of a ticket system and a
+                    navigation bar.
                   </h2>
                 </p>
                 <div className={styles.buttons}>
@@ -128,7 +136,7 @@ export const Project = () => {
                 </div>
               </div>
             </motion.div>
-{/* ========================================================================================================================================= */}
+            {/* ========================================================================================================================================= */}
 
             <motion.div
               className={styles.item}
@@ -144,36 +152,43 @@ export const Project = () => {
             >
               <div className={styles.left}>
                 <div className={styles.img}>
-                  <img src={olxImage} alt="olx" />
+                  <img src={jiomartImg} alt="olx" />
                 </div>
               </div>
               <div className={styles.right}>
-                <h2 className={styles.projectTitle}>HappyFox Clone</h2>
+                <h2 className={styles.projectTitle}>Jiomart Clone</h2>
 
                 <p className={styles.projectDesc}>
-                  Build clone of Olx.com in 5 days along with a team of 5
-                  members. Olx is a platform where user can  buy, sell or exchange used goods and services.
+                  Build full stack clone of jiomart.com in 6 days along with a
+                  team of 4 members. Jiomart is an e-commerce platform where
+                  user can buy products
                   <h2>Features</h2>
                   <ul style={{ marginLeft: "30px" }}>
                     <li>Login</li>
                     <li>Signup</li>
-                    <li>Selling Page</li>
                     <li>Product Pages</li>
+                    <li>Cart Page</li>
                   </ul>
                   <h2>
-                    Tech Stack: React | Redux | Routing | Chakra-UI | JSON-Server{" "}
+                    <b> <i> Tech Stack : </i></b> Node js | Express | MongoDB | React | Redux |
+                    Routing | Chakra-UI |
+                  </h2>
+                  <h2>
+                   <b> <i> Area of Responsibility :</i></b> Build product API along with sort and filter functionality
+                    and also worked on connecting the frontend with the backend.
                   </h2>
                 </p>
+
                 <div className={styles.buttons}>
                   <a
-                    href="https://github.com/shivraj32644/Olx-Clone"
+                    href="https://github.com/shivraj32644/JioMart-FullStack"
                     target="_blank"
                     className={styles.primaryBtn}
                   >
                     Github Link
                   </a>
                   <a
-                    href="https://olx-clone-by-team-olx.netlify.app/"
+                    href="https://jiomart-fullstack.netlify.app/"
                     target="_blank"
                     className={styles.primaryBtn}
                   >

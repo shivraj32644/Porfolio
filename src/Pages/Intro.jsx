@@ -44,6 +44,7 @@ export const Intro = () => {
         {varient ? (
           <>
             <Box>
+              
           <Heading lineHeight="tall" textAlign="start">
             <Heading fontFamily="monospace" color='#4dbdfa' mb={'15px'} size="sm" fontSize="35px">
               <Typewriter
@@ -96,7 +97,8 @@ export const Intro = () => {
 
       ):(
       <>
-      <Box w={"42%"}>
+              <Box w={"42%"}>
+              {/* <img style={{height:'45px'}} src='https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif' alt='' />", */}
           <Heading lineHeight="tall" textAlign="start">
             <Heading fontFamily="monospace" color='#4dbdfa' mb={'15px'} size="sm" fontSize="35px">
               <Typewriter
@@ -110,7 +112,7 @@ export const Intro = () => {
                   typeString:('A simple yet powerful native javascript'),
                   strings: [
                     
-                    "Hello 👋",
+                    "Hello 👋 ",
                     "Hii 👋",
                     "Namaste 🙏" ,
                   ],

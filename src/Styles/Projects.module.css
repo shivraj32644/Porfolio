@@ -121,9 +121,13 @@ a {
 #projects .item .left {
   flex: 1;
 }
+
+
+
+
 #projects .item .right {
   font-size: 10px;
-
+  
   margin-left: -150px;
   flex: 1;
   background-color: var(--body-bg);
@@ -178,9 +182,27 @@ a {
 }
 #projects .item .right .projectDesc {
   color: var(--secondary-gray);
+  
   color: #fff;
   margin-bottom: 3rem;
+  /* border: 1px solid rgb(249, 247, 247); */
+  height: 240px;
+  
+  overflow-y: scroll;
+  padding: 5px;
 }
+#projects .item .right .projectDesc::-webkit-scrollbar {
+  width: 3px;
+  
+}
+#projects .item .right .projectDesc::-webkit-scrollbar-thumb {
+  background: rgb(13, 165, 230);
+  border-radius: 20px;
+}
+#projects .item .right .projectDesc::-webkit-scrollbar-track {
+  
+}
+
 #projects .item .right .externalLink {
   display: flex;
   align-items: center;
@@ -220,3 +242,4 @@ a {
     text-align: center;
   }
 }
+

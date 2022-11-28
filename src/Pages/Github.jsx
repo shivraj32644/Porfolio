@@ -41,20 +41,20 @@ export const Resume = () => {
         <Box
         
         
-          display={'flex'} alignItems='center' flexWrap={'wrap'} columnGap={'15px'}>
+          display={'flex'} alignItems='center' flexWrap={'wrap'} gap={'15px'} >
           <motion.img
-            initial={variant ? { x: 50,opacity:0 } : { x: 300 ,opacity:0} }
+            initial={variant ? { x: "100%",opacity:0 } : { x: 300 ,opacity:0} }
           whileInView={{ x: 0, opacity:1 }}
             whileHover={{ y: -5 }}
-            viewport={{ once: false, amount: .7 }}
+            // viewport={{ once: false, amount: .7 }}
           transition={{ duration: 1, type: "spring", stiffness: 200 }}
           
             src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=shivraj32644&theme=2077" alt="" />
           <motion.img
-             initial={variant ? { x: -50 ,opacity:0} : { x: -300,opacity:0 }}
+             initial={variant ? { x: "-100%" ,opacity:0} : { x: -300,opacity:0 }}
           whileInView={{ x: 0, opacity:1 }}
             whileHover={{ y: -5 }}
-            viewport={{ once: false, amount: .7 }}
+            // viewport={{ once: false, amount: .4 }}
           transition={{ duration: 1, type: "spring", stiffness: 200 }}
             
             src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=shivraj32644&theme=2077" alt="" />
