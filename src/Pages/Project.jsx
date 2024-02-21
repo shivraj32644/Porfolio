@@ -98,7 +98,7 @@ export const Project = () => {
                 </div>
               </div>
               <div className={styles.right}>
-                <h2 className={styles.projectTitle}>HappyFox Clone</h2>
+                <h2 className={styles.projectTitle}>CorpCare Website</h2>
 
                 <p className={styles.projectDesc}>
                 This website serves as a lending platform for CorpCare, allowing
