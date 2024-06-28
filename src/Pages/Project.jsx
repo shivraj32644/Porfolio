@@ -38,7 +38,7 @@ export const Project = () => {
             >
               <div className={styles.left}>
                 <div className={styles.img}>
-                  <img src="https://i.imgur.com/REfFyFn.png" alt="" />
+                  <img src="cc-platform.png" alt="" />
                 </div>
               </div>
               <div className={styles.right}>
@@ -94,7 +94,7 @@ export const Project = () => {
             >
               <div className={styles.left}>
                 <div className={styles.img}>
-                  <img src="https://raw.githubusercontent.com/shivraj32644/Images/main/website-cc.png?token=GHSAT0AAAAAACKUC7MYWW72VZHJYVXK33D4ZOVYOPA" alt="" />
+                  <img src="website-cc.png" alt="" />
                 </div>
               </div>
               <div className={styles.right}>
